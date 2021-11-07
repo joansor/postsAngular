@@ -1,8 +1,16 @@
-<li class="list-group-item"  [ngClass]="{'list-group-item': true,
+<li class="list-group-item" [ngClass]="{'list-group-item': true,
 'list-group-item-success': loveIts === 1,
 'list-group-item-danger': loveIts === -1}">
-    
-    <h4>{{ postTitle }}</h4>
+    <div class="container col-md-12 col-sd-12 col-lg-12 p-0">
+        <div cass="rows">
+            <div class="col-md-10">
+                <h4>{{ postTitle }}</h4>
+            </div>
+           <div class="col-md-2">
+            <p>{{ date | date}}</p>
+           </div>
+        </div>
+    </div>
     <p>{{ postContent }}</p>
     <button class="btn btn-success" (click)="likePost()">Love It!</button>
     <button class="btn btn-danger" (click)="noLikePost()">Don't Love It!</button>
