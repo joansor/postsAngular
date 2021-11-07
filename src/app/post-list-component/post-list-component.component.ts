@@ -12,7 +12,7 @@ export class PostListComponentComponent implements OnInit {
     {
       title: 'Mon premier post',
       content: `There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable`,
-      loveIts: 0,
+      loveIts: 1,
     
     },
     {
@@ -24,7 +24,7 @@ export class PostListComponentComponent implements OnInit {
     {
       title: 'Encore un post',
       content: `There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable`,
-      loveIts: 0,
+      loveIts: -1,
      
     }
   ];

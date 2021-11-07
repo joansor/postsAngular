@@ -1,7 +1,9 @@
-<li class="list-group-item">
-    <div></div>
+<li class="list-group-item"  [ngClass]="{'list-group-item': true,
+'list-group-item-success': loveIts === 1,
+'list-group-item-danger': loveIts === -1}">
+    
     <h4>{{ postTitle }}</h4>
     <p>{{ postContent }}</p>
-    <button class="btn btn-success">Love It!</button>
-    <button class="btn btn-danger">Don't Love It!</button>
-  </li>
+    <button class="btn btn-success" (click)="likePost()">Love It!</button>
+    <button class="btn btn-danger" (click)="noLikePost()">Don't Love It!</button>
+</li>

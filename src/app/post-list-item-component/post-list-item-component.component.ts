@@ -7,14 +7,22 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class PostListItemComponentComponent implements OnInit {
 
-  @Input() postTitle:string | undefined;
-  @Input() postContent:string | undefined;
-  @Input() loveIts:number | undefined;
+  @Input() postTitle: string | undefined;
+  @Input() postContent: string | undefined;
+  @Input() loveIts: number | undefined;
 
-  
+ 
   constructor() { }
 
   ngOnInit(): void {
+  }
+  likePost(){
+    this.loveIts !== 1 ? this.loveIts = 1 : this.loveIts = 0;
+    console.log(this.loveIts);
+  }
+  noLikePost(){
+    this.loveIts !== -1 ? this.loveIts = -1 : this.loveIts = 0;
+    console.log(this.loveIts); 
   }
 
 }
